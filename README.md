@@ -5,6 +5,7 @@ Este proyecto contiene una aplicación de Node.js que se conecta a una base de d
 ## Estructura del proyecto
 
 El proyecto se organiza de la siguiente manera:
+
 ├── app/ # Carpeta de la aplicación Node.js
 │ ├── ... # Archivos y carpetas de la aplicación
 │ └── Dockerfile # Archivo de configuración de Docker para la aplicación
