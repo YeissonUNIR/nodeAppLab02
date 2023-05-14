@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  nodeApp:
+    image: yejimenezunir/node_app_lab02:v1.0.0
+    container_name: node_app
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - MONGODB_URI=mongodb://mongodb:27017/mydb
+    depends_on:
+      - mongodb
+    networks:
+      - network_nodeApp
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    networks:
+      - network_nodeApp
+networks:
+  network_nodeApp:
+    driver: bridge
