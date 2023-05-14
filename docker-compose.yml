@@ -15,8 +15,12 @@ services:
   mongodb:
     image: mongo
     container_name: mongodb
+    volumes:
+      - mydb:/data/db
     networks:
       - network_nodeApp
 networks:
   network_nodeApp:
     driver: bridge
+volumes:
+  mydb:
