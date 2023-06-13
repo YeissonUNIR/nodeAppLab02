@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-volume-01
+spec:
+  claimRef:
+    name: pv-volume-01
+    namespace: node-mongo
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""
+  hostPath:
+    path: /tmp/pv-volume-01
